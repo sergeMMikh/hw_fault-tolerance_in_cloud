@@ -129,7 +129,8 @@ data "aws_ami" "aws_ubuntu" {
 ```
 
 *2. Скриншот статуса балансировщика и целевой группы.*
-* <img href="https://drive.google.com/file/d/1V4EBiD0VdRJJp17JjNTpLVvwFwKvl_-0/view?usp=sharing" alt="Task_2_1" width="500" height="auto">
+[<img src="">](http://example.com/)
+* [<img src="https://drive.google.com/file/d/1V4EBiD0VdRJJp17JjNTpLVvwFwKvl_-0/view?usp=sharing" alt="Task_2_1" width="500" height="auto">](https://drive.google.com/file/d/1V4EBiD0VdRJJp17JjNTpLVvwFwKvl_-0/view?usp=sharing)
 *2.1 Описания полученных aws instanses*
 * <img href="https://drive.google.com/file/d/1VFoDSsGPMUGdtCPTIUZ6wTSt-pavD65Y/view?usp=sharing" alt="Task_2_1" width="500" height="auto">
 * <img href="https://drive.google.com/file/d/1VPVwq0pG_UA3YmjmTnBtmyrwjjgiZraG/view?usp=sharing" alt="Task_2_1" width="500" height="auto">
