@@ -129,15 +129,15 @@ data "aws_ami" "aws_ubuntu" {
 ```
 
 *2. Скриншот статуса балансировщика и целевой группы.*
-* <img src="https://drive.google.com/file/d/1V4EBiD0VdRJJp17JjNTpLVvwFwKvl_-0/view?usp=sharing" alt="Task_2_1" width="500" height="auto">
+* <img src="images/hw_1_Task_1_1.jpg" alt="Task_2_1" width="500" height="auto">
 *2.1 Описания полученных aws instanses*
-* <img href="https://drive.google.com/file/d/1VFoDSsGPMUGdtCPTIUZ6wTSt-pavD65Y/view?usp=sharing" alt="Task_2_1" width="500" height="auto">
-* <img href="https://drive.google.com/file/d/1VPVwq0pG_UA3YmjmTnBtmyrwjjgiZraG/view?usp=sharing" alt="Task_2_1" width="500" height="auto">
+* <img href="images/hw_1_Task_1_instance_1.jpg" alt="Task_2_1" width="500" height="auto">
+* <img href="images/hw_1_Task_1_instance_2.jpg" alt="Task_2_1" width="500" height="auto">
 *2.2 Описание балансировщика*
-* <img href="https://drive.google.com/file/d/1VWdj_SNvop6W42VaCNPDLaQTIXKs1cDL/view?usp=sharing" alt="Task_2_1" width="500" height="auto">
+* <img href="images/hw_1_Task_1_lb_1.jpg" alt="Task_2_1" width="500" height="auto">
 
 *3. Скриншот страницы, которая открылась при запросе IP-адреса балансировщика.*
-* <img href="https://drive.google.com/file/d/1VWxT1ybVyk1ty71HU9sIHwWI1MFNPInG/view?usp=sharing" alt="Task_2_1" width="500" height="auto">
-* <img href="https://drive.google.com/file/d/1VbeYEl8f1UEDY9-4ybuZEgllu-s59Uj7/view?usp=sharing" alt="Task_2_1" width="500" height="auto">
+* <img href="images/hw_1_Task_1_check_1.jpg" alt="Task_2_1" width="500" height="auto">
+* <img href="images/hw_1_Task_1_check_2.jpg" alt="Task_2_1" width="500" height="auto">
 
 ---
