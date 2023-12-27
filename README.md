@@ -9,13 +9,24 @@
 
 1. Теперь вместо одной виртуальной машины сделайте terraform playbook, который:
 
-- создаст 2 идентичные виртуальные машины. Используйте аргумент [count](https://www.terraform.io/docs/language/meta-arguments/count.html) для создания таких ресурсов;
-- создаст [таргет-группу](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/lb_target_group). Поместите в неё созданные на шаге 1 виртуальные машины;
-- создаст [сетевой балансировщик нагрузки](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/lb_network_load_balancer), который слушает на порту 80, отправляет трафик на порт 80 виртуальных машин и http healthcheck на порт 80 виртуальных машин.
-
-Рекомендуем изучить [документацию сетевого балансировщика нагрузки](https://cloud.yandex.ru/docs/network-load-balancer/quickstart) для того, чтобы было понятно, что вы сделали.
+- создаст 2 идентичные виртуальные машины. Используйте аргумент *count* для создания таких ресурсов;
+- создаст *таргет-группу*. Поместите в неё созданные на шаге 1 виртуальные машины;
+- создаст *сетевой балансировщик нагрузки*, который слушает на порту 80, отправляет трафик на порт 80 виртуальных машин и http healthcheck на порт 80 виртуальных машин.
 
 2. Установите на созданные виртуальные машины пакет Nginx любым удобным способом и запустите Nginx веб-сервер на порту 80.
+
+3. Перейдите в веб-консоль и убедитесь, что: 
+
+- созданный балансировщик находится в статусе Active,
+- обе виртуальные машины в целевой группе находятся в состоянии healthy.
+
+4. Сделайте запрос на 80 порт на внешний IP-адрес балансировщика и убедитесь, что вы получаете ответ в виде дефолтной страницы Nginx.
+
+## Задание 2*
+
+1. Теперь вместо создания виртуальных машин создайте [группу виртуальных машин с балансировщиком нагрузки](https://cloud.yandex.ru/docs/compute/operations/instance-groups/create-with-balancer).
+
+2. Nginx нужно будет поставить тоже автоматизированно. Для этого вам нужно будет подложить файл установки Nginx в user-data-ключ [метадаты](https://cloud.yandex.ru/docs/compute/concepts/vm-metadata) виртуальной машины.
 
 3. Перейдите в веб-консоль Yandex Cloud и убедитесь, что: 
 
@@ -127,6 +138,14 @@ data "aws_ami" "aws_ubuntu" {
   }
 } 
 ```
+Для автоматизации установки *nginx* и подмены *index.html* создан файл *userdata.tpl*, о чём есть запись в *tf* файле:
+```
+#!/bin/bash
+sudo apt update -y &&
+sudo apt install -y nginx
+echo "Server IP:" > /var/www/html/index.html
+hostname -I >> /var/www/html/index.html
+```
 
 *2. Скриншот статуса балансировщика и целевой группы.*
 * <img src="images/hw_1_Task_1_1.jpg" alt="hw_1_Task_1_1.jpg" width="500" height="auto">
@@ -135,6 +154,8 @@ data "aws_ami" "aws_ubuntu" {
 * <img src="images/hw_1_Task_1_instance_2.jpg" alt="hw_1_Task_1_instance_2.jpg" width="500" height="auto">
 *2.2 Описание балансировщика*
 * <img src="images/hw_1_Task_1_lb_1.jpg" alt="hw_1_Task_1_lb_1.jpg" width="500" height="auto">
+
+
 
 *3. Скриншот страницы, которая открылась при запросе IP-адреса балансировщика.*
 * <img src="images/hw_1_Task_1_check_1.jpg" alt="hw_1_Task_1_check_1.jpg" width="500" height="auto">
