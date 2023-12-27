@@ -129,15 +129,15 @@ data "aws_ami" "aws_ubuntu" {
 ```
 
 *2. Скриншот статуса балансировщика и целевой группы.*
-* <img src="images/hw_1_Task_1_1.jpg" alt="Task_2_1" width="500" height="auto">
+* <img src="images/hw_1_Task_1_1.jpg" alt="hw_1_Task_1_1.jpg" width="500" height="auto">
 *2.1 Описания полученных aws instanses*
-* <img href="images/hw_1_Task_1_instance_1.jpg" alt="Task_2_1" width="500" height="auto">
-* <img href="images/hw_1_Task_1_instance_2.jpg" alt="Task_2_1" width="500" height="auto">
+* <img href="images/hw_1_Task_1_instance_1.jpg" alt="hw_1_Task_1_instance_1.jpg" width="500" height="auto">
+* <img href="images/hw_1_Task_1_instance_2.jpg" alt="hw_1_Task_1_instance_2.jpg" width="500" height="auto">
 *2.2 Описание балансировщика*
-* <img href="images/hw_1_Task_1_lb_1.jpg" alt="Task_2_1" width="500" height="auto">
+* <img href="images/hw_1_Task_1_lb_1.jpg" alt="hw_1_Task_1_lb_1.jpg" width="500" height="auto">
 
 *3. Скриншот страницы, которая открылась при запросе IP-адреса балансировщика.*
-* <img href="images/hw_1_Task_1_check_1.jpg" alt="Task_2_1" width="500" height="auto">
-* <img href="images/hw_1_Task_1_check_2.jpg" alt="Task_2_1" width="500" height="auto">
+* <img href="images/hw_1_Task_1_check_1.jpg" alt="hw_1_Task_1_check_1.jpg" width="500" height="auto">
+* <img href="images/hw_1_Task_1_check_2.jpg" alt="hw_1_Task_1_check_2.jpg" width="500" height="auto">
 
 ---
